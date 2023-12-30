@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/a7ef7a7de7.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <script src="style.js" defer></script>
+</head>
+<body style="font-family: 'Montserrat';">
+    
+    <div class="flex flex-row-reverse">
+        <!-- Side Bar -->
+        <div id="side_bar" style="position: fixed; width: 350px;" class="bg-sky-900 h-screen p-5 pt-8 flex flex-col gap-6 relative duration-300">
+            <h2 class="text-2xl text-sky-50 font-bold"> Shopping Cart</h2>
+        <div class="flex flex-col gap-4" id = "cart-list" style="overflow-y: scroll;">      
+        </div>
+        <div class="flex flex-row justify-between">
+            <h2 class="text-2xl text-sky-50 font-bold">Total :</h2>
+            <span id="total-card" class="text-2xl text-sky-50 font-bold "> 0 $</span>
+        </div>
+        </div>
+        <!-- fin SideBar -->
+        <div class="flex-auto flex-row " >
+            <div class="flex flex-col p-4" style="position: fixed;">
+                <div class="flex justify-end " style="height: fit-content;">
+                     <ul class="list-style-none flex flex-row space-x-6">
+                        <li class="ml-2 text-xm cursor-pointer" onclick="toggleSidebar()"><i class="fa-solid fa-cart-shopping"></i> Cart</li>
+                        <li class="ml-2 text-xm"><a href=""><i class="fa-regular fa-user"></i>  MEKKAOUI</a></li>
+                    </ul>
+                </div>
+               <style>
+                ::-webkit-scrollbar {
+                  width: 0;
+                }
+               </style>
+            <div id="product-list" style="height: 99vh; overflow-y: scroll; " class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 w-fit p-4">
+            </div>
+            
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
